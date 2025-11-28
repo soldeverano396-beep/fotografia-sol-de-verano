@@ -9,22 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
 
     <style>
-        /* LOGO SUPERIOR DERECHA */
-.logo-header {
-    position: absolute;
-    top: 18px;
-    right: 35px;
-    width: 70px;
-    opacity: 0.9;
-    transition: transform .3s ease, opacity .3s ease;
-    cursor: pointer;
-}
-
-.logo-header:hover {
-    transform: scale(1.05);
-    opacity: 1;
-}
-
         :root {
             --rojo: #971600;
             --durazno: #F4A676;
@@ -84,6 +68,7 @@
             color: var(--crema);
             opacity: 0;
             animation: fadeUp 1.2s ease forwards;
+            font-family: 'Homemade Apple', cursive;
         }
 
         .subtitle {
@@ -230,7 +215,6 @@
 <!-- GALERÍA -->
 <section class="gallery">
 
-    <!-- 15 FOTOS -->
     <div class="photo-card"><img src="img/juanylili-1.jpg"></div>
     <div class="photo-card"><img src="img/juanylili-2.jpg"></div>
     <div class="photo-card"><img src="img/juanylili-3.jpg"></div>
@@ -298,7 +282,7 @@
         if (e.key === "Escape") closeLightbox();
     });
 
-    // Swipe en móvil
+    // Swipe móvil
     let startX = 0;
 
     lightbox.addEventListener("touchstart", (e) => {
