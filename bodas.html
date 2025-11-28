@@ -8,304 +8,237 @@
     <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
 
     <style>
-        /* ICONO WHATSAPP FLOTANTE */
-.whatsapp-float {
-    position: fixed;
-    bottom: 22px;
-    right: 22px;
-    z-index: 2000;
-}
-
-.whatsapp-float img {
-    width: 58px;
-    height: 58px;
-    border-radius: 50%;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-    transition: transform .3s ease;
-}
-
-.whatsapp-float img:hover {
-    transform: scale(1.08);
-}
-
-/* LOGO SUPERIOR IZQUIERDA */
-.logo-header {
-    position: absolute;
-    top: 18px;
-    left: 35px;
-    width: 70px;
-    opacity: 0.9;
-    transition: transform .3s ease, opacity .3s ease;
-    cursor: pointer;
-    z-index: 1000;
-}
-
-.logo-header:hover {
-    transform: scale(1.05);
-    opacity: 1;
-}
-
-:root {
-    --rojo: #971600;
-    --durazno: #F4A676;
-    --crema: #F8D3A0;
-    --nude: #EAD7C2;
-    --blanco-calido: #F7F1EB;
-    --cafe: #4B2B1F;
-}
-
-body
-<!-- WHATSAPP FLOTANTE -->
-<a href="https://wa.me/573133051492?text=Hola%20Susan%20🌞%20encontré%20tu%20página%20y%20quiero%20saber%20más%20sobre%20tus%20sesiones." 
-   class="whatsapp-float" target="_blank">
-    <img src="img/whatsapp.png" alt="WhatsApp">
-</a>
-        
-{
-    margin: 0;
-    background: var(--rojo);
-    font-family: "Courier New", monospace;
-    color: var(--nude);
-}
-
-/* HEADER */
-header {
-    position: relative;
-    width: 100%;
-    height: 90px;
-}
-
-/* MENÚ SUPERIOR DERECHA */
-.menu {
-    position: absolute;
-    top: 35px;
-    right: 40px;
-    display: flex;
-    gap: 24px;
-}
-
-.menu a {
-    color: var(--durazno);
-    text-decoration: none;
-    font-size: 15px;
-    transition: .3s ease;
-}
-
-.menu a:hover {
-    color: var(--crema);
-}
-
-h1.titulo {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 40px;
-    color: var(--durazno);
-    font-family: 'Homemade Apple', cursive;
-}
-
-/* Álbumes */
-.albumes-bodas {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.subtitulo-bodas {
-    font-size: 26px;
-    color: var(--crema);
-    margin-bottom: 25px;
-}
-
-.contenedor-albumes {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    flex-wrap: wrap;
-}
-
-/* TARJETAS */
-.album-card {
-    background: var(--nude);
-    padding: 28px;
-    border-radius: 14px;
-    text-decoration: none;
-    width: 380px;
-    color: var(--cafe);
-    transition: .3s ease;
-    box-shadow: 0 8px 26px rgba(0,0,0,0.28);
-}
-
-.album-card:hover {
-    transform: translateY(-10px) scale(1.03);
-}
-
-.album-card img {
-    width: 100%;
-    height: 320px;
-    border-radius: 14px;
-    object-fit: cover;
-}
-
-.album-card h3 {
-    margin-top: 18px;
-    color: var(--rojo);
-    font-size: 22px;
-    letter-spacing: 1px;
-}
-
-.album-card p {
-    font-size: 15px;
-    opacity: .85;
-    margin-top: 6px;
-}
-
-/* ACORDEÓN */
-.acordeon {
-    max-width: 750px;
-    margin: 60px auto;
-}
-
-.acordeon-item {
-    background: var(--nude);
-    border-radius: 10px;
-    border: 1px solid var(--crema);
-    margin-bottom: 12px;
-}
-
-.acordeon-titulo {
-    padding: 16px;
-    cursor: pointer;
-    font-size: 18px;
-    color: var(--rojo);
-    background: var(--crema);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.acordeon-flecha {
-    transition: transform .3s ease;
-}
-
-.acordeon-item.open .acordeon-flecha {
-    transform: rotate(180deg);
-}
-
-.acordeon-contenido {
-    padding: 18px;
-    display: none;
-    color: var(--cafe);
-    font-size: 14px;
-    line-height: 1.6;
-}
-     /* CTA */
-        .cta {
-            margin: 90px auto;
-            text-align: center;
-            max-width: 600px;
+        :root {
+            --rojo: #971600;
+            --durazno: #F4A676;
+            --crema: #F8D3A0;
+            --nude: #EAD7C2;
+            --blanco-calido: #F7F1EB;
+            --cafe: #4B2B1F;
         }
 
-        .cta h2 {
-            font-family: 'Homemade Apple', cursive;
-            font-size: 36px;
+        body {
+            margin: 0;
+            background: var(--rojo);
+            font-family: "Courier New", monospace;
+            color: var(--nude);
+        }
+
+        /* LOGO SUPERIOR IZQUIERDA */
+        .logo-header {
+            position: absolute;
+            top: 18px;
+            left: 35px;
+            width: 70px;
+            opacity: 0.9;
+            transition: .3s ease;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .logo-header:hover {
+            transform: scale(1.05);
+            opacity: 1;
+        }
+
+        /* MENÚ */
+        header {
+            position: relative;
+            width: 100%;
+            height: 90px;
+        }
+
+        .menu {
+            position: absolute;
+            top: 35px;
+            right: 40px;
+            display: flex;
+            gap: 24px;
+        }
+
+        .menu a {
             color: var(--durazno);
-        }
-
-        .cta a {
-            display: inline-block;
-            padding: 10px 28px;
-            border: 1px solid var(--crema);
             text-decoration: none;
-            color: var(--crema);
-            border-radius: 6px;
-            margin-top: 20px;
-            letter-spacing: .5px;
+            font-size: 15px;
             transition: .3s;
         }
 
-        .cta a:hover {
-            background: var(--crema);
-            color: var(--rojo);
+        .menu a:hover {
+            color: var(--crema);
         }
 
-        footer {
+        /* TÍTULO */
+        h1.titulo {
             text-align: center;
-            padding: 40px;
-            opacity: 0.85;
+            margin-top: 40px;
+            font-size: 40px;
+            color: var(--durazno);
+            font-family: 'Homemade Apple', cursive;
         }
 
-        @keyframes fadeUp {
-            0% { opacity: 0; transform: translateY(12px); }
-            100% { opacity: 1; transform: translateY(0); }
+        /* Álbumes */
+        .albumes-bodas {
+            padding: 40px 20px;
+            text-align: center;
         }
-/* SERVICIOS ADICIONALES */
-.servicios {
-    margin-top: 70px;
-    padding: 0 20px;
-}
 
-.servicios-grid-relajada {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 60px;
-    justify-items: center;
-}
+        .subtitulo-bodas {
+            font-size: 26px;
+            color: var(--crema);
+            margin-bottom: 25px;
+        }
 
-.servicio-item-relajado {
-    background: var(--nude);
-    padding: 26px;
-    border-radius: 12px;
-    max-width: 350px;
-    text-align: center;
-    box-shadow: 0 6px 22px rgba(0,0,0,0.25);
-}
+        .contenedor-albumes {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
 
-.servicio-item-relajado img {
-    max-width: 220px;
-    border-radius: 12px;
-    margin-bottom: 16px;
-}
+        .album-card {
+            background: var(--nude);
+            padding: 28px;
+            border-radius: 14px;
+            text-decoration: none;
+            width: 380px;
+            color: var(--cafe);
+            transition: .3s ease;
+            box-shadow: 0 8px 26px rgba(0,0,0,0.28);
+        }
 
-.servicio-item-relajado h3 {
-    color: var(--rojo);
-    font-size: 18px;
-    margin-bottom: 10px;
-}
+        .album-card:hover {
+            transform: translateY(-10px) scale(1.03);
+        }
 
-.servicio-item-relajado p {
-    color: var(--cafe);
-    font-size: 15px;
-    line-height: 1.4;
-    opacity: .95;
-}
+        .album-card img {
+            width: 100%;
+            height: 320px;
+            border-radius: 14px;
+            object-fit: cover;
+        }
 
-/* PAGO */
-.pago {
-    max-width: 750px;
-    padding: 25px;
-    background: var(--nude);
-    margin: 60px auto;
-    border-radius: 10px;
-    color: var(--cafe);
-}
+        .album-card h3 {
+            margin-top: 18px;
+            color: var(--rojo);
+            font-size: 22px;
+        }
 
-.volver {
-    display: block;
-    text-align: center;
-    margin: 50px 0;
-    color: var(--crema);
-    text-decoration: none;
-}
+        .album-card p {
+            font-size: 15px;
+            opacity: .85;
+            margin-top: 6px;
+        }
+
+        /* Acordeón */
+        .acordeon {
+            max-width: 750px;
+            margin: 60px auto;
+        }
+
+        .acordeon-item {
+            background: var(--nude);
+            border-radius: 10px;
+            border: 1px solid var(--crema);
+            margin-bottom: 12px;
+        }
+
+        .acordeon-titulo {
+            padding: 16px;
+            cursor: pointer;
+            font-size: 18px;
+            color: var(--rojo);
+            background: var(--crema);
+        }
+
+        .acordeon-contenido {
+            padding: 18px;
+            display: none;
+            color: var(--cafe);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Servicios adicionales */
+        .servicios {
+            margin-top: 70px;
+            padding: 0 20px;
+        }
+
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 60px;
+            justify-items: center;
+        }
+
+        .servicio-item {
+            background: var(--nude);
+            padding: 26px;
+            border-radius: 12px;
+            max-width: 350px;
+            text-align: center;
+            box-shadow: 0 6px 22px rgba(0,0,0,0.25);
+        }
+
+        .servicio-item img {
+            max-width: 220px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+        }
+
+        .servicio-item h3 {
+            color: var(--rojo);
+            margin-bottom: 10px;
+        }
+
+        .servicio-item p {
+            color: var(--cafe);
+            line-height: 1.4;
+        }
+
+        /* Pago */
+        .pago {
+            max-width: 750px;
+            padding: 25px;
+            background: var(--nude);
+            margin: 60px auto;
+            border-radius: 10px;
+            color: var(--cafe);
+        }
+
+        .volver {
+            display: block;
+            text-align: center;
+            margin: 50px 0;
+            color: var(--crema);
+            text-decoration: none;
+        }
+
+        /* WhatsApp flotante */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 22px;
+            right: 22px;
+            z-index: 2000;
+        }
+
+        .whatsapp-float img {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            transition: transform .3s ease;
+        }
+
+        .whatsapp-float img:hover {
+            transform: scale(1.08);
+        }
     </style>
 
     <script>
-        function toggleAcordeon(contentId, itemId) {
-            const contenido = document.getElementById(contentId);
-            const item = document.getElementById(itemId);
-            const isOpen = contenido.style.display === "block";
-
-            contenido.style.display = isOpen ? "none" : "block";
-            if (isOpen) { item.classList.remove("open"); }
-            else { item.classList.add("open"); }
+        function toggleAcordeon(id) {
+            const cont = document.getElementById(id);
+            cont.style.display = cont.style.display === "block" ? "none" : "block";
         }
     </script>
 </head>
@@ -328,7 +261,6 @@ h1.titulo {
 
 <h1 class="titulo">BODAS</h1>
 
-<!-- Álbumes -->
 <section class="albumes-bodas">
     <h2 class="subtitulo-bodas">Álbumes</h2>
 
@@ -349,194 +281,95 @@ h1.titulo {
     </div>
 </section>
 
-<!-- Tarifas -->
 <section class="acordeon">
     <h2 style="color:var(--durazno); text-align:center; margin-bottom:35px;">Tarifas</h2>
 
-    <!-- ALBA -->
-    <div class="acordeon-item" id="item-alba">
-        <div class="acordeon-titulo" onclick="toggleAcordeon('alba','item-alba')">
+    <div class="acordeon-item">
+        <div class="acordeon-titulo" onclick="toggleAcordeon('alba')">
             OPCIÓN 1 — ALBA
-            <span class="acordeon-flecha">▼</span>
         </div>
-
         <div id="alba" class="acordeon-contenido">
-
-            <p style="color:var(--rojo); font-weight:bold; margin-bottom:10px;">
-                (Cobertura esencial)
-            </p>
-
-            <p style="color:var(--cafe); font-size:17px; margin-bottom:20px;">
-                <strong>Inversión: $1.500.000 COP</strong>
-            </p>
-
+            <p><strong style="color:var(--rojo);">Inversión: $1.500.000</strong></p>
             <ul>
-                <li>Cobertura de 5 horas</li>
-                <li>Incluye los momentos principales del día:</li>
+                <li>Cobertura 5 horas</li>
+                <li>Sesión de pareja</li>
+                <li>Galería digital</li>
+                <li>Mínimo 100 fotos editadas</li>
             </ul>
-
-            <p>
-                – Llegada de los novios<br>
-                – Ceremonia completa<br>
-                – Sesión de pareja<br>
-                – Inicio de la recepción: brindis, fotos familiares y primeros momentos de fiesta
-            </p>
-
-            <ul>
-                <li>Entrega de mínimo 100 fotografías editadas con nuestra colorización estilo Sol de Verano</li>
-                <li>Galería digital privada</li>
-                <li>Reel de 60 segundos</li>
-            </ul>
-
         </div>
     </div>
 
-    <!-- ZENITH -->
-    <div class="acordeon-item" id="item-zenith">
-        <div class="acordeon-titulo" onclick="toggleAcordeon('zenith','item-zenith')">
+    <div class="acordeon-item">
+        <div class="acordeon-titulo" onclick="toggleAcordeon('zenith')">
             OPCIÓN 2 — ZENITH
-            <span class="acordeon-flecha">▼</span>
         </div>
-
         <div id="zenith" class="acordeon-contenido">
-
-            <p style="color:var(--rojo); font-weight:bold; margin-bottom:10px;">
-                (Cobertura completa)
-            </p>
-
-            <p style="color:var(--cafe); font-size:17px; margin-bottom:20px;">
-                <strong>Inversión: $2.450.000 COP</strong>
-            </p>
-
+            <p><strong style="color:var(--rojo);">Inversión: $2.450.000</strong></p>
             <ul>
-                <li>Cobertura de 8 horas</li>
-                <li>Diseñada para documentar todo el desarrollo del evento:</li>
+                <li>Cobertura 8 horas</li>
+                <li>Álbum AMELIA 20×20</li>
+                <li>Galería digital</li>
+                <li>Mínimo 300 fotos</li>
             </ul>
-
-            <p>
-                – Preparativos<br>
-                – Ceremonia completa<br>
-                – Sesión de pareja<br>
-                – Recepción (cena, brindis, entradas familiares, vals)
-            </p>
-
-            <ul>
-                <li>Mínimo 300 fotografías editadas</li>
-                <li>Galería digital privada</li>
-                <li>Álbum AMELIA 20×20 cm (40×20 abierto)</li>
-                <li>Impresión fotográfica premium</li>
-                <li>Tapa en lino</li>
-                <li>10 páginas</li>
-                <li>Reel de 60 segundos</li>
-            </ul>
-
         </div>
     </div>
 
-    <!-- OCASO -->
-    <div class="acordeon-item" id="item-ocaso">
-        <div class="acordeon-titulo" onclick="toggleAcordeon('ocaso','item-ocaso')">
+    <div class="acordeon-item">
+        <div class="acordeon-titulo" onclick="toggleAcordeon('ocaso')">
             OPCIÓN 3 — OCASO
-            <span class="acordeon-flecha">▼</span>
         </div>
-
         <div id="ocaso" class="acordeon-contenido">
-
-            <p style="color:var(--rojo); font-weight:bold; margin-bottom:10px;">
-                (Cobertura extendida)
-            </p>
-
-            <p style="color:var(--cafe); font-size:17px; margin-bottom:20px;">
-                <strong>Inversión: $3.250.000 COP</strong>
-            </p>
-
+            <p><strong style="color:var(--rojo);">Inversión: $3.250.000</strong></p>
             <ul>
-                <li>Preboda dentro del área metropolitana (Jardín Botánico)</li>
-                <li>Cobertura de 10 horas</li>
-                <li>Recomendada para quienes desean una documentación amplia del evento:</li>
+                <li>Preboda</li>
+                <li>Cobertura 10 horas</li>
+                <li>Álbum AMELIA 20×20</li>
+                <li>Mínimo 400 fotos</li>
             </ul>
-
-            <p>
-                – Preparativos<br>
-                – Ceremonia completa<br>
-                – Sesión de pareja<br>
-                – Recepción completa
-            </p>
-
-            <ul>
-                <li>Mínimo 400 fotografías editadas</li>
-                <li>Galería digital privada</li>
-                <li>Álbum AMELIA 20×20 cm (40×20 abierto)</li>
-                <li>40 páginas</li>
-                <li>Impresión fina</li>
-                <li>Tapa en lino</li>
-                <li>Asistente durante toda la jornada</li>
-                <li>Reel de 60 segundos</li>
-            </ul>
-
         </div>
     </div>
 </section>
 
-<!-- Servicios adicionales -->
 <section class="servicios">
     <h2 style="text-align:center; color:var(--crema); margin-bottom:40px;">Servicios Adicionales</h2>
 
-    <div class="servicios-grid-relajada">
+    <div class="servicios-grid">
 
-        <div class="servicio-item-relajado">
+        <div class="servicio-item">
             <img src="img/bordado.jpg">
-            <h3>Pandero bordado — $350.000</h3>
-            <p>Pieza en lino con foto impresa y bordado artesanal.</p>
+            <h3>Pandero bordado</h3>
+            <p>Fotografía + bordado artesanal.</p>
         </div>
 
-        <div class="servicio-item-relajado">
+        <div class="servicio-item">
             <img src="img/retrato.jpg">
-            <h3>Retratos para redes — $150.000</h3>
-            <p>1 hora de sesión • 10 fotos editadas.</p>
+            <h3>Retratos</h3>
+            <p>Sesión adicional profesional.</p>
         </div>
 
-        <div class="servicio-item-relajado">
+        <div class="servicio-item">
             <img src="img/triptico.jpg">
-            <h3>Tríptico — $450.000</h3>
-            <p>Composición editorial de 3 fotografías.</p>
-        </div>
-
-        <div class="servicio-item-relajado">
-            <img src="img/juanylili-4.jpg">
-            <h3>Foto adicional — $12.000</h3>
-            <p>Agrega fotos extra editadas.</p>
-        </div>
-
-        <div class="servicio-item-relajado">
-            <img src="img/leoyevi-12.jpg">
-            <h3>Hora adicional — $150.000</h3>
-            <p>Amplía la cobertura de tu evento.</p>
-        </div>
-
-        <div class="servicio-item-relajado">
-            <img src="img/album-1.jpg">
-            <h3>Photobook 20×20 — $350.000 — 18 páginas</h3>
-            <p>Álbum Amelia con tus fotos favoritas.</p>
+            <h3>Tríptico</h3>
+            <p>Decoración editorial 3 fotos.</p>
         </div>
 
     </div>
 </section>
 
-<!-- Pago -->
 <section class="pago">
     <h2 style="color:var(--rojo); text-align:center;">Detalles de pago</h2>
     <p>• 50% para reservar</p>
     <p>• 50% el día del evento</p>
-    <p>• Medios: Bancolombia, Nequi, Efectivo</p>
+    <p>• Métodos: Bancolombia, Nequi, efectivo</p>
 </section>
-<!-- CTA -->
-<section class="cta" id="contacto">
-    <h2>¿Agendamos tu historia?</h2>
-   <a href="https://wa.me/573133051492?text=Hola%20Susan%20🌞%20encontré%20tu%20página%20y%20quiero%20saber%20más%20sobre%20tus%20sesiones.">Escríbeme</a>
 
-</section>
 <a href="index.html" class="volver">← Volver al inicio</a>
+
+<!-- WHATSAPP FLOTANTE -->
+<a href="https://wa.me/573133051492?text=Hola%20Susan%20🌞%20quiero%20información%20sobre%20fotografía%20Sol%20de%20Verano"
+   class="whatsapp-float" target="_blank">
+    <img src="img/whatsapp.png">
+</a>
 
 </body>
 </html>
