@@ -9,22 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
 
     <style>
-        /* LOGO SUPERIOR DERECHA */
-.logo-header {
-    position: absolute;
-    top: 18px;
-    right: 35px;
-    width: 70px;
-    opacity: 0.9;
-    transition: transform .3s ease, opacity .3s ease;
-    cursor: pointer;
-}
-
-.logo-header:hover {
-    transform: scale(1.05);
-    opacity: 1;
-}
-
         :root {
             --rojo: #971600;
             --durazno: #F4A676;
@@ -84,6 +68,7 @@
             color: var(--durazno);
             opacity: 0;
             animation: fadeUp 1.2s ease forwards;
+            font-family: 'Homemade Apple', cursive;
         }
 
         .subtitle {
@@ -230,7 +215,6 @@
 <!-- GALERÍA -->
 <section class="gallery">
 
-    <!-- 19 FOTOS -->
     <div class="photo-card"><img src="img/leoyevi-1.jpg"></div>
     <div class="photo-card"><img src="img/leoyevi-2.jpg"></div>
     <div class="photo-card"><img src="img/leoyevi-3.jpg"></div>
@@ -246,7 +230,7 @@
     <div class="photo-card"><img src="img/leoyevi-13.jpg"></div>
     <div class="photo-card"><img src="img/leoyevi-14.jpg"></div>
     <div class="photo-card"><img src="img/leoyevi-15.jpg"></div>
-    
+    <div class="photo-card"><img src="img/leoyevi-16.jpg"></div>
     <div class="photo-card"><img src="img/leoyevi-17.jpg"></div>
     <div class="photo-card"><img src="img/leoyevi-18.jpg"></div>
     <div class="photo-card"><img src="img/leoyevi-19.jpg"></div>
@@ -302,7 +286,7 @@
         if (e.key === "Escape") closeLightbox();
     });
 
-    // Swipe en móvil
+    // Swipe móvil
     let startX = 0;
 
     lightbox.addEventListener("touchstart", (e) => {
