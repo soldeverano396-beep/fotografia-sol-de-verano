@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leo & Yevi | Sol de Verano</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+
+    <style>
+        /* LOGO SUPERIOR DERECHA */
+.logo-header {
+    position: absolute;
+    top: 18px;
+    right: 35px;
+    width: 70px;
+    opacity: 0.9;
+    transition: transform .3s ease, opacity .3s ease;
+    cursor: pointer;
+}
+
+.logo-header:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+        :root {
+            --rojo: #971600;
+            --durazno: #F4A676;
+            --crema: #F8D3A0;
+            --nude: #EAD7C2;
+            --blanco-calido: #F7F1EB;
+            --cafe: #4B2B1F;
+        }
+
+        body {
+            margin: 0;
+            background: var(--blanco-calido);
+            font-family: "Courier New", Courier, monospace;
+            color: var(--durazno);
+            overflow-x: hidden;
+        }
+
+        /* ---------------- HEADER ---------------- */
+        header {
+            padding: 25px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            opacity: 0;
+            animation: fadeIn 1.2s ease forwards;
+        }
+
+        .logo {
+            width: 140px;
+            opacity: .9;
+            transition: .4s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+            filter: brightness(1.2);
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--durazno);
+            font-size: 15px;
+            transition: .3s;
+        }
+
+        nav a:hover {
+            color: var(--crema);
+        }
+
+        /* ---------------- TÍTULO ---------------- */
+        .page-title {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 42px;
+            font-weight: bold;
+            color: var(--durazno);
+            opacity: 0;
+            animation: fadeUp 1.2s ease forwards;
+        }
+
+        .subtitle {
+            text-align: center;
+            margin-top: 5px;
+            font-size: 16px;
+            opacity: .85;
+            color: var(--durazno);
+        }
+
+        /* ---------------- GALERÍA ---------------- */
+        .gallery {
+            padding: 60px 8%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            gap: 45px;
+            justify-items: center;
+        }
+
+        .photo-card {
+            background: var(--nude);
+            border-radius: 10px;
+            padding: 14px;
+            width: 330px;
+            height: 420px;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
+            opacity: 0;
+            animation: fadeUp 1s ease forwards;
+            transform: translateY(20px);
+            transition: .4s ease;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 6px;
+            transition: .8s ease;
+            transform: scale(1.05);
+        }
+
+        .photo-card img:hover {
+            transform: scale(1);
+        }
+
+        /* ---------------- LIGHTBOX ---------------- */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.92);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 998;
+        }
+
+        .lightbox-img {
+            max-width: 90%;
+            max-height: 85%;
+            border-radius: 8px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.4);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            font-size: 38px;
+            color: white;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            font-size: 55px;
+            color: white;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .arrow.left { left: 30px; }
+        .arrow.right { right: 30px; }
+
+        /* ------- BOTÓN VOLVER ------- */
+        .back {
+            display: block;
+            width: fit-content;
+            margin: 80px auto 60px;
+            padding: 10px 26px;
+            border: 1px solid var(--crema);
+            color: var(--crema);
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 6px;
+            transition: .3s;
+        }
+
+        .back:hover {
+            background: var(--crema);
+            color: var(--rojo);
+        }
+
+        /* ------- ANIMACIONES ------- */
+        @keyframes fadeUp {
+            0% { opacity: 0; transform: translateY(12px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <a href="index.html"><img src="img/logo-terracota.png" class="logo"></a>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="bodas.html">Bodas</a>
+        <a href="maternidad.html">Maternidad</a>
+        <a href="infantil.html">Infantil</a>
+        <a href="amelia.html">Amelia</a>
+    </nav>
+</header>
+
+<h1 class="page-title">Leo & Yevi</h1>
+<p class="subtitle">Una boda íntima, cálida y llena de detalles hermosos.</p>
+
+<!-- GALERÍA -->
+<section class="gallery">
+
+    <!-- 19 FOTOS -->
+    <div class="photo-card"><img src="img/leoyevi-1.jpg"></div>
+    <div class="photo-card"><img src="img/leoyevi-2.jpg"></div>
+    <div class="photo-card"><img src="img/leoyevi-3.jpg"></div>
+    <div class="photo-card"><img src="img/leoyevi-4.jpg"></div>
+    <div class="photo-card"><img src="img/leoyevi-5.jpg"></div>
+    <div class="photo-card"><img src="img/leoyevi-6.jpg"></div>
+    <div class="photo-card"><img src="img/leoyevi-7.jpg"></div>
+    <div class="photo-card"><img src="img/leoyevi-8.jpg"></div>
+    <div class="photo-card"><img src="img/leoyevi-9.jpg"></div>
+    <div class="photo-card"><img src="img/leoyevi-10.jpg"></div>
+    <div class="photo-card"><img src="img/leoyevi-11.jpg"></div>
+    <div class="photo-card"><img src="img/leoyevi-12.jpg"></div>
+    <div class="photo-card"><img src="img/leoyevi-13.jpg"></div>
+    <div class="photo-card"><img src="img/leoyevi-14.jpg"></div>
+    <div class="photo-card"><img src="img/leoyevi-15.jpg"></div>
+    
+    <div class="photo-card"><img src="img/leoyevi-17.jpg"></div>
+    <div class="photo-card"><img src="img/leoyevi-18.jpg"></div>
+    <div class="photo-card"><img src="img/leoyevi-19.jpg"></div>
+
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">×</span>
+    <span class="arrow left" onclick="prevImage()">‹</span>
+    <img class="lightbox-img" id="lightbox-img">
+    <span class="arrow right" onclick="nextImage()">›</span>
+</div>
+
+<a href="bodas.html" class="back">← Volver a bodas</a>
+
+<script>
+    const images = Array.from(document.querySelectorAll(".photo-card img")).map(img => img.src);
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    let currentIndex = 0;
+
+    document.querySelectorAll(".photo-card img").forEach((img, index) => {
+        img.addEventListener("click", () => {
+            currentIndex = index;
+            openLightbox();
+        });
+    });
+
+    function openLightbox() {
+        lightbox.style.display = "flex";
+        lightboxImg.src = images[currentIndex];
+    }
+
+    function closeLightbox() {
+        lightbox.style.display = "none";
+    }
+
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        lightboxImg.src = images[currentIndex];
+    }
+
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        lightboxImg.src = images[currentIndex];
+    }
+
+    // Navegación con teclado
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowRight") nextImage();
+        if (e.key === "ArrowLeft") prevImage();
+        if (e.key === "Escape") closeLightbox();
+    });
+
+    // Swipe en móvil
+    let startX = 0;
+
+    lightbox.addEventListener("touchstart", (e) => {
+        startX = e.changedTouches[0].clientX;
+    });
+
+    lightbox.addEventListener("touchend", (e) => {
+        let endX = e.changedTouches[0].clientX;
+        if (startX - endX > 60) nextImage();
+        if (endX - startX > 60) prevImage();
+    });
+</script>
+
+</body>
+</html>

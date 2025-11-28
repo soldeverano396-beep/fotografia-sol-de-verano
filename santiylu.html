@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santi y Lu | Maternidad – Sol de Verano</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+
+    <style>
+        /* LOGO SUPERIOR DERECHA */
+.menu {
+    position: absolute;
+    top: 35px;
+    right: 40px;
+    display: flex;
+    gap: 24px;
+}
+
+.menu a {
+    color: var(--durazno);
+    text-decoration: none;
+    font-size: 15px;
+    transition: .3s ease;
+}
+
+.menu a:hover {
+    color: var(--crema);
+}
+
+        nav a {
+            margin-left: 25px;
+            color: var(--durazno);
+            text-decoration: none;
+            transition: .3s;
+        }
+        nav a:hover { color: var(--crema); }
+
+        h1.titulo {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 40px;
+            color: var(--durazno);
+            font-family: 'Homemade Apple', cursive;
+        }
+
+
+
+.logo-header:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+        :root {
+            --rojo: #971600;
+            --durazno: #F4A676;
+            --crema: #F8D3A0;
+            --nude: #EAD7C2;
+            --blanco-calido: #F7F1EB;
+            --cafe: #4B2B1F;
+        }
+
+        body {
+            margin: 0;
+            background: var(--rojo);
+            font-family: "Courier New", monospace;
+            color: var(--nude);
+        }
+        :root {
+            --rojo: #971600;
+            --durazno: #F4A676;
+            --crema: #F8D3A0;
+            --nude: #EAD7C2;
+            --blanco-calido: #F7F1EB;
+            --cafe: #4B2B1F;
+            --verde:#B9C2A8; 
+        }
+
+        body {
+            margin: 0;
+            background: var(--crema);
+            font-family: "Courier New", monospace;
+            color: var(--nude);
+        }
+
+        /* LOGO SUPERIOR IZQUIERDA */
+        .logo-top {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 70px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        header {
+            text-align: center;
+            padding-top: 110px;
+            padding-bottom: 10px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            color: var(--durazno);
+        }
+
+        header p {
+            margin-top: 8px;
+            font-size: 14px;
+            color: var(--blanco-calido);
+            opacity: 0.9;
+        }
+
+        /* GALERÍA */
+        .gallery {
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto 60px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+
+        .gallery img:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 24px rgba(0,0,0,0.45);
+        }
+
+        /* LIGHTBOX */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+        }
+
+        .lightbox-close {
+            position: fixed;
+            top: 20px;
+            right: 25px;
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .lightbox-arrow {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 38px;
+            color: #fff;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .lightbox-arrow.left {
+            left: 25px;
+        }
+
+        .lightbox-arrow.right {
+            right: 25px;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .back-link a {
+            color: var(--crema);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .gallery img {
+                height: 230px;
+            }
+        }
+    </style>
+</head>
+ <!-- MENÚ DERECHA -->
+    <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="bodas.html">Bodas</a>
+        <a href="maternidad.html">Maternidad</a>
+        <a href="infantil.html">Infantil</a>
+        <a href="amelia.html">Amelia</a>
+    </nav>
+<body>
+
+<!-- LOGO / HOME -->
+
+<a href="index.html">
+    <img src="img/logo-terracota.png" class="logo-top">
+</a>
+
+<header>
+    <h1>Santi y Lu</h1>
+    <p>Una espera cálida, íntima y luminosa.</p>
+</header>
+
+<div class="back-link">
+    <a href="maternidad.html">← Volver a Maternidad</a>
+</div>
+
+<!-- GALERÍA -->
+<div class="gallery" id="gallery">
+    <img src="img/maternidad-1.JPG"  data-index="0">
+    <img src="img/maternidad-2.JPG"  data-index="1">
+    <img src="img/maternidad-3.JPG"  data-index="2">
+    <img src="img/maternidad-4.JPG"  data-index="3">
+    <img src="img/maternidad-5.JPG"  data-index="4">
+    <img src="img/maternidad-6.JPG"  data-index="5">
+    <img src="img/maternidad-7.JPG"  data-index="6">
+    <img src="img/maternidad-8.JPG"  data-index="7">
+    <img src="img/maternidad-9.JPG"  data-index="8">
+    <img src="img/maternidad-10.JPG" data-index="9">
+    <img src="img/maternidad-11.JPG" data-index="10">
+    <img src="img/maternidad-12.JPG" data-index="11">
+    <img src="img/maternidad-13.JPG" data-index="12">
+    <img src="img/maternidad-14.JPG" data-index="13">
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <span class="lightbox-arrow left" id="prev">&#10094;</span>
+    <img id="lightboxImg" src="">
+    <span class="lightbox-arrow right" id="next">&#10095;</span>
+</div>
+
+<script>
+    const images = Array.from(document.querySelectorAll('.gallery img'));
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const closeBtn = document.getElementById('lightboxClose');
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+
+    let currentIndex = 0;
+    let startX = 0;
+
+    function openLightbox(index) {
+        currentIndex = index;
+        lightboxImg.src = images[currentIndex].src;
+        lightbox.style.display = 'flex';
+    }
+
+    function closeLightbox() {
+        lightbox.style.display = 'none';
+    }
+
+    function showNext() {
+        currentIndex = (currentIndex + 1) % images.length;
+        lightboxImg.src = images[currentIndex].src;
+    }
+
+    function showPrev() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        lightboxImg.src = images[currentIndex].src;
+    }
+
+    images.forEach((img, index) => {
+        img.addEventListener('click', () => openLightbox(index));
+    });
+
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+    });
+
+    nextBtn.addEventListener('click', showNext);
+    prevBtn.addEventListener('click', showPrev);
+
+    document.addEventListener('keydown', (e) => {
+        if (lightbox.style.display === 'flex') {
+            if (e.key === 'ArrowRight') showNext();
+            if (e.key === 'ArrowLeft') showPrev();
+            if (e.key === 'Escape') closeLightbox();
+        }
+    });
+
+    // Swipe en móvil
+    lightbox.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    lightbox.addEventListener('touchend', (e) => {
+        const endX = e.changedTouches[0].clientX;
+        const diff = endX - startX;
+        if (Math.abs(diff) > 50) {
+            if (diff < 0) showNext();
+            else showPrev();
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mateo – Sol de Verano</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --rojo:#971600;
+            --durazno:#F4A676;
+            --crema:#F8D3A0;
+            --nude:#EAD7C2;
+            --blanco:#F7F1EB;
+            --cafe:#4B2B1F;
+            --verde:#B9C2A8; 
+            --terracota:#C05431;
+        }
+
+        body {
+            margin:0;
+            background:var(--verde);
+            font-family:"Courier New", monospace;
+            color:var(--terracota);
+        }
+
+        /* LOGO */
+        .logo-header {
+            position:absolute;
+            top:18px;
+            left:35px;
+            width:70px;
+            cursor:pointer;
+            z-index:1000;
+        }
+
+        /* MENÚ */
+        .menu {
+            position:absolute;
+            top:35px;
+            right:40px;
+            display:flex;
+            gap:24px;
+            z-index:900;
+        }
+
+        .menu a {
+            color:var(--terracota);
+            text-decoration:none;
+            font-size:15px;
+            transition:.3s;
+        }
+
+        .menu a:hover { color:var(--crema); }
+
+        header {
+            text-align:center;
+            padding-top:120px;
+            padding-bottom:10px;
+        }
+
+        header h1 {
+            font-size:42px;
+            color:var(--terracota);
+        }
+
+        header p {
+            margin-top:6px;
+            font-size:14px;
+            opacity:0.9;
+            color:var(--blanco);
+        }
+
+        .volver {
+            text-align:center;
+            margin-bottom:30px;
+            color:var(--durazno);
+        }
+
+        .volver a {
+            color:var(--terracota);
+            text-decoration:none;
+            font-size:14px;
+        }
+
+        .volver a:hover { text-decoration:underline; }
+
+        /* GALERÍA */
+        .gallery {
+            width:90%;
+            max-width:1100px;
+            margin:30px auto 60px;
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+            gap:18px;
+        }
+
+        .gallery img {
+            width:100%;
+            height:320px;
+            object-fit:cover;
+            border-radius:8px;
+            cursor:pointer;
+            box-shadow:0 6px 18px rgba(0,0,0,0.35);
+            transition:transform .3s, box-shadow .3s;
+        }
+
+        .gallery img:hover {
+            transform:translateY(-4px);
+            box-shadow:0 10px 24px rgba(0,0,0,0.45);
+        }
+
+        /* LIGHTBOX */
+        .lightbox {
+            position:fixed;
+            inset:0;
+            background:rgba(0,0,0,0.85);
+            display:none;
+            align-items:center;
+            justify-content:center;
+            z-index:2000;
+        }
+
+        .lightbox img {
+            max-width:90%;
+            max-height:90%;
+            border-radius:10px;
+            box-shadow:0 12px 30px rgba(0,0,0,0.7);
+        }
+
+        .lightbox-close {
+            position:fixed;
+            top:20px;
+            right:30px;
+            font-size:36px;
+            color:#fff;
+            cursor:pointer;
+        }
+
+        .lightbox-arrow {
+            position:fixed;
+            top:50%;
+            transform:translateY(-50%);
+            font-size:42px;
+            color:#fff;
+            cursor:pointer;
+            user-select:none;
+        }
+
+        .lightbox-arrow.left { left:30px; }
+        .lightbox-arrow.right { right:30px; }
+
+        @media(max-width:600px){
+            .gallery img { height:230px; }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- LOGO -->
+<a href="index.html">
+    <img src="img/logo-terracota.png" class="logo-header">
+</a>
+
+<!-- MENÚ -->
+<nav class="menu">
+    <a href="index.html">Inicio</a>
+    <a href="bodas.html">Bodas</a>
+    <a href="maternidad.html">Maternidad</a>
+    <a href="infantil.html">Infantil</a>
+    <a href="amelia.html">Amelia</a>
+</nav>
+
+<header>
+    <h1>Mateo</h1>
+    <p>Retratos infantiles llenos de juego, luz y espontaneidad.</p>
+</header>
+
+<div class="volver">
+    <a href="infantil.html">← Volver a Infantil</a>
+</div>
+
+<!-- GALERÍA -->
+<div class="gallery" id="gallery">
+    <img src="img/nino-1.JPG"  data-index="0">
+    <img src="img/nino-2.JPG"  data-index="1">
+    <img src="img/nino-3.JPG"  data-index="2">
+    <img src="img/nino-4.JPG"  data-index="3">
+    <img src="img/nino-5.JPG"  data-index="4">
+    <img src="img/nino-6.JPG"  data-index="5">
+    <img src="img/nino-7.JPG"  data-index="6">
+    <img src="img/nino-9.JPG"  data-index="8">
+    <img src="img/nino-10.JPG" data-index="9">
+    <img src="img/nino-11.JPG" data-index="10">
+    <img src="img/nino-12.JPG" data-index="11">
+    <img src="img/nino-13.JPG" data-index="12">
+    <img src="img/nino-14.JPG" data-index="13">
+    <img src="img/nino-15.JPG" data-index="14">
+    <img src="img/nino-16.JPG" data-index="15">
+    <img src="img/nino-17.JPG" data-index="16">
+    <img src="img/nino-18.JPG" data-index="17">
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="closeBtn">&times;</span>
+    <span class="lightbox-arrow left" id="prev">&#10094;</span>
+    <img id="lightboxImg" src="">
+    <span class="lightbox-arrow right" id="next">&#10095;</span>
+</div>
+
+<script>
+    const imgs=[...document.querySelectorAll('.gallery img')];
+    const lb=document.getElementById('lightbox');
+    const lbImg=document.getElementById('lightboxImg');
+    const close=document.getElementById('closeBtn');
+    const next=document.getElementById('next');
+    const prev=document.getElementById('prev');
+
+    let index=0;
+    let startX=0;
+
+    function open(i){
+        index=i;
+        lbImg.src=imgs[index].src;
+        lb.style.display='flex';
+    }
+
+    function closeLb(){ lb.style.display='none'; }
+
+    function nextImg(){
+        index=(index+1)%imgs.length;
+        lbImg.src=imgs[index].src;
+    }
+
+    function prevImg(){
+        index=(index-1+imgs.length)%imgs.length;
+        lbImg.src=imgs[index].src;
+    }
+
+    imgs.forEach((img,i)=>img.onclick=()=>open(i));
+    close.onclick=closeLb;
+    next.onclick=nextImg;
+    prev.onclick=prevImg;
+
+    lb.onclick=e=>{ if(e.target===lb) closeLb(); };
+
+    document.onkeydown=e=>{
+        if(lb.style.display==='flex'){
+            if(e.key==='ArrowRight') nextImg();
+            if(e.key==='ArrowLeft') prevImg();
+            if(e.key==='Escape') closeLb();
+        }
+    };
+
+    lb.addEventListener('touchstart',e=>{
+        startX=e.touches[0].clientX;
+    });
+
+    lb.addEventListener('touchend',e=>{
+        const diff=e.changedTouches[0].clientX - startX;
+        if(Math.abs(diff)>50){
+            if(diff<0) nextImg();
+            else prevImg();
+        }
+    });
+</script>
+
+</body>
+</html>

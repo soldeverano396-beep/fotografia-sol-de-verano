@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bodas – Sol de Verano</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+
+    <style>
+            /* LOGO SUPERIOR DERECHA */
+.logo-header {
+    position: absolute;
+    top: 18px;
+    right: 35px;
+    width: 70px;
+    opacity: 0.9;
+    transition: transform .3s ease, opacity .3s ease;
+    cursor: pointer;
+}
+
+.logo-header:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+        :root {
+            --rojo: #971600;
+            --durazno: #F4A676;
+            --crema: #F8D3A0;
+            --nude: #EAD7C2;
+            --blanco-calido: #F7F1EB;
+            --cafe: #4B2B1F;
+        }
+
+        body {
+            margin: 0;
+            background: var(--rojo);
+            font-family: "Courier New", monospace;
+            color: var(--nude);
+        }
+
+        header/* LOGO SUPERIOR IZQUIERDA */
+.logo-header {
+    position: absolute;
+    top: 18px;
+    left: 35px;
+    width: 70px;
+    opacity: 0.9;
+    transition: transform .3s ease, opacity .3s ease;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.logo-header:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 90px;
+}
+
+/* MENÚ SUPERIOR DERECHA */
+.menu {
+    position: absolute;
+    top: 35px;
+    right: 40px;
+    display: flex;
+    gap: 24px;
+}
+
+.menu a {
+    color: var(--durazno);
+    text-decoration: none;
+    font-size: 15px;
+    transition: .3s ease;
+}
+
+.menu a:hover {
+    color: var(--crema);
+}
+
+        nav a {
+            margin-left: 25px;
+            color: var(--durazno);
+            text-decoration: none;
+            transition: .3s;
+        }
+        nav a:hover { color: var(--crema); }
+
+        h1.titulo {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 40px;
+            color: var(--durazno);
+            font-family: 'Homemade Apple', cursive;
+        }
+
+
+        /* Álbumes */
+        .albumes-bodas {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .subtitulo-bodas {
+            font-size: 26px;
+            color: var(--crema);
+            margin-bottom: 25px;
+        }
+
+        .contenedor-albumes {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        /* TARJETAS MAXI EDITORIALES */
+        .album-card {
+            background: var(--nude);
+            padding: 28px;
+            border-radius: 14px;
+            text-decoration: none;
+            width: 380px;
+            color: var(--cafe);
+            transition: .3s ease;
+            box-shadow: 0 8px 26px rgba(0,0,0,0.28);
+        }
+
+        .album-card:hover {
+            transform: translateY(-10px) scale(1.03);
+        }
+
+        .album-card img {
+            width: 100%;
+            height: 320px;
+            border-radius: 14px;
+            object-fit: cover;
+        }
+
+        .album-card h3 {
+            margin-top: 18px;
+            color: var(--rojo);
+            font-size: 22px;
+            letter-spacing: 1px;
+        }
+
+        .album-card p {
+            font-size: 15px;
+            opacity: .85;
+            margin-top: 6px;
+        }
+
+        /* Acordeón */
+        .acordeon {
+            max-width: 750px;
+            margin: 60px auto;
+        }
+
+        .acordeon-item {
+            background: var(--nude);
+            border-radius: 10px;
+            border: 1px solid var(--crema);
+            margin-bottom: 12px;
+        }
+
+        .acordeon-titulo {
+            padding: 16px;
+            cursor: pointer;
+            font-size: 18px;
+            color: var(--rojo);
+            background: var(--crema);
+        }
+
+        .acordeon-contenido {
+            padding: 18px;
+            display: none;
+            color: var(--cafe);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Servicios adicionales */
+        .servicios {
+            margin-top: 70px;
+            padding: 0 20px;
+        }
+
+        .servicios-grid-relajada {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 60px;
+            justify-items: center;
+        }
+
+        .servicio-item-relajado {
+            background: var(--nude);
+            padding: 26px;
+            border-radius: 12px;
+            max-width: 350px;
+            text-align: center;
+            box-shadow: 0 6px 22px rgba(0,0,0,0.25);
+        }
+
+        .servicio-item-relajado img {
+            max-width: 220px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+        }
+
+        .servicio-item-relajado h3 {
+            color: var(--rojo);
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .servicio-item-relajado p {
+            color: var(--cafe);
+            font-size: 15px;
+            line-height: 1.4;
+            opacity: .95;
+        }
+
+        /* Pago */
+        .pago {
+            max-width: 750px;
+            padding: 25px;
+            background: var(--nude);
+            margin: 60px auto;
+            border-radius: 10px;
+            color: var(--cafe);
+        }
+
+        .volver {
+            display: block;
+            text-align: center;
+            margin: 50px 0;
+            color: var(--crema);
+            text-decoration: none;
+        }
+    </style>
+
+    <script>
+        
+        function toggleAcordeon(id) {
+            const cont = document.getElementById(id);
+            cont.style.display = cont.style.display === "block" ? "none" : "block";
+        }
+    </script>
+    <script>
+function toggleAcordeon(contentId, itemId) {
+    const contenido = document.getElementById(contentId);
+    const item = document.getElementById(itemId);
+    const isOpen = contenido.style.display === "block";
+
+    contenido.style.display = isOpen ? "none" : "block";
+
+    if (isOpen) {
+        item.classList.remove("open");
+    } else {
+        item.classList.add("open");
+    }
+}
+</script>
+
+
+</head>
+
+<body>
+
+< <header>
+
+    <!-- LOGO IZQUIERDA -->
+    <a href="index.html">
+        <img src="img/logo-terracota.png" class="logo-header">
+    </a>
+
+    <!-- MENÚ DERECHA -->
+    <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="bodas.html">Bodas</a>
+        <a href="maternidad.html">Maternidad</a>
+        <a href="infantil.html">Infantil</a>
+        <a href="amelia.html">Amelia</a>
+    </nav>
+
+</header>
+<h1 class="titulo">BODAS</h1>
+
+<!-- Álbumes -->
+<section class="albumes-bodas">
+    <h2 class="subtitulo-bodas">Álbumes</h2>
+
+    <div class="contenedor-albumes">
+
+        <a href="leoyevi.html" class="album-card">
+            <img src="img/leoyevi-1.JPG">
+            <h3>Leo & Evi</h3>
+            <p>Boda cálida, íntima y luminosa.</p>
+        </a>
+
+        <a href="juanylili.html" class="album-card">
+            <img src="img/juanylili-3.JPG">
+            <h3>Juan & Lili</h3>
+            <p>Una historia espontánea y llena de luz.</p>
+        </a>
+
+    </div>
+</section>
+
+<!-- Tarifas -->
+<section class="acordeon">
+    <h2 style="color:var(--durazno); text-align:center; margin-bottom:35px;">Tarifas</h2>
+
+    <!-- ALBA -->
+    <div class="acordeon-item" id="item-alba">
+        <div class="acordeon-titulo" onclick="toggleAcordeon('alba','item-alba')">
+            OPCIÓN 1 — ALBA
+            <span class="acordeon-flecha">▼</span>
+        </div>
+
+        <div id="alba" class="acordeon-contenido">
+
+            <p style="color:var(--rojo); font-weight:bold; margin-bottom:10px;">
+                (Cobertura esencial)
+            </p>
+
+            <p style="color:var(--cafe); font-size:17px; margin-bottom:20px;">
+                <strong>Inversión: $1.500.000 COP</strong>
+            </p>
+
+            <ul>
+                <li>Cobertura de 5 horas</li>
+                <li>Incluye los momentos principales del día:</li>
+            </ul>
+
+            <p>
+                – Llegada de los novios<br>
+                – Ceremonia completa<br>
+                – Sesión de pareja<br>
+                – Inicio de la recepción: brindis, fotos familiares y primeros momentos de fiesta
+            </p>
+
+            <ul>
+                <li>Entrega de mínimo 100 fotografías editadas con nuestra colorización estilo Sol de Verano</li>
+                <li>Galería digital privada para visualizar y descargar desde cualquier dispositivo</li>
+                <li>Reel de 60 segundos</li>
+            </ul>
+
+        </div>
+    </div>
+
+    <!-- ZENITH -->
+    <div class="acordeon-item" id="item-zenith">
+        <div class="acordeon-titulo" onclick="toggleAcordeon('zenith','item-zenith')">
+            OPCIÓN 2 — ZENITH
+            <span class="acordeon-flecha">▼</span>
+        </div>
+
+        <div id="zenith" class="acordeon-contenido">
+
+            <p style="color:var(--rojo); font-weight:bold; margin-bottom:10px;">
+                (Cobertura completa)
+            </p>
+
+            <p style="color:var(--cafe); font-size:17px; margin-bottom:20px;">
+                <strong>Inversión: $2.450.000 COP</strong>
+            </p>
+
+            <ul>
+                <li>Cobertura de 8 horas</li>
+                <li>Diseñada para documentar todo el desarrollo del evento:</li>
+            </ul>
+
+            <p>
+                – Preparativos<br>
+                – Ceremonia completa<br>
+                – Sesión de pareja<br>
+                – Recepción (cena, brindis, entradas familiares, vals)
+            </p>
+
+            <ul>
+                <li>Mínimo 300 fotografías editadas</li>
+                <li>Galería digital privada</li>
+                <li>Álbum AMELIA 20×20 cm (40×20 abierto)</li>
+                <li>Impresión fotográfica premium</li>
+                <li>Tapa en lino</li>
+                <li>10 páginas</li>
+                <li>Reel de 60 segundos</li>
+            </ul>
+
+        </div>
+    </div>
+
+    <!-- OCASO -->
+    <div class="acordeon-item" id="item-ocaso">
+        <div class="acordeon-titulo" onclick="toggleAcordeon('ocaso','item-ocaso')">
+            OPCIÓN 3 — OCASO
+            <span class="acordeon-flecha">▼</span>
+        </div>
+
+        <div id="ocaso" class="acordeon-contenido">
+
+            <p style="color:var(--rojo); font-weight:bold; margin-bottom:10px;">
+                (Cobertura extendida)
+            </p>
+
+            <p style="color:var(--cafe); font-size:17px; margin-bottom:20px;">
+                <strong>Inversión: $3.250.000 COP</strong>
+            </p>
+
+            <ul>
+                <li>Preboda dentro del área metropolitana (Jardín Botánico)</li>
+                <li>Cobertura de 10 horas</li>
+                <li>Recomendada para quienes desean una documentación amplia del evento:</li>
+            </ul>
+
+            <p>
+                – Preparativos<br>
+                – Ceremonia completa<br>
+                – Sesión de pareja<br>
+                – Recepción completa
+            </p>
+
+            <ul>
+                <li>Mínimo 400 fotografías editadas</li>
+                <li>Galería digital privada</li>
+                <li>Álbum AMELIA 20×20 cm (40×20 abierto)</li>
+                <li>40 páginas</li>
+                <li>Impresión fina</li>
+                <li>Tapa en lino</li>
+                <li>Asistente durante toda la jornada</li>
+                <li>Reel de 60 segundos</li>
+            </ul>
+
+        </div>
+    </div>
+</section>
+
+<!-- Servicios adicionales -->
+<section class="servicios">
+    <h2 style="text-align:center; color:var(--crema); margin-bottom:40px;">Servicios Adicionales</h2>
+
+    <div class="servicios-grid-relajada">
+
+        <div class="servicio-item-relajado">
+            <img src="img/bordado.jpg">
+            <h3>Pandero bordado — $350.000</h3>
+            <p>Pieza en lino con foto impresa y bordado artesanal.</p>
+        </div>
+
+        <div class="servicio-item-relajado">
+            <img src="img/retrato.jpg">
+            <h3>Retratos para redes — $150.000</h3>
+            <p>1 hora de sesión • 10 fotos editadas.</p>
+        </div>
+
+        <div class="servicio-item-relajado">
+            <img src="img/triptico.JPG">
+            <h3>Tríptico — $450.000</h3>
+            <p>Composición editorial de 3 fotografías.</p>
+        </div>
+
+        <div class="servicio-item-relajado">
+            <img src="img/juanylili-4.jpg">
+            <h3>Foto adicional — $12.000</h3>
+            <p>Agrega fotos extra editadas.</p>
+        </div>
+
+        <div class="servicio-item-relajado">
+            <img src="img/leoyevi-12.JPG">
+            <h3>Hora adicional — $150.000</h3>
+            <p>Amplía la cobertura de tu evento.</p>
+        </div>
+
+        <div class="servicio-item-relajado">
+            <img src="img/album-1.JPG">
+            <h3>Photobook 20×20 — $350.000 - 18 páginas</h3>
+            <p>Álbum Amelia con tus fotos favoritas.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Pago -->
+<section class="pago">
+    <h2 style="color:var(--rojo); text-align:center;">Detalles de pago</h2>
+    <p>• 50% para reservar</p>
+    <p>• 50% el día del evento</p>
+    <p>• Medios: Bancolombia, Nequi, Efectivo</p>
+</section>
+
+<a href="index.html" class="volver">← Volver al inicio</a>
+
+</body>
+</html>

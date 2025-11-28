@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infantil | Sol de Verano</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --rojo:#971600;
+            --durazno:#F4A676;
+            --crema:#F8D3A0;
+            --nude:#EAD7C2;
+            --blanco:#F7F1EB;
+            --cafe:#4B2B1F;
+        }
+
+        body {
+            margin:0;
+            background:var(--rojo);
+            font-family:"Courier New", monospace;
+            color:var(--nude);
+        }
+
+        /* LOGO */
+        .logo-header {
+            position: absolute;
+            top: 18px;
+            left: 35px;
+            width: 70px;
+            opacity: 0.9;
+            transition: transform .3s ease, opacity .3s ease;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .logo-header:hover {
+            transform: scale(1.05);
+            opacity: 1;
+        }
+
+        /* HEADER */
+        header {
+            position: relative;
+            width: 100%;
+            height: 90px;
+        }
+
+        /* MENÚ SUPERIOR DERECHA */
+        .menu {
+            position: absolute;
+            top: 35px;
+            right: 40px;
+            display: flex;
+            gap: 24px;
+        }
+
+        .menu a {
+            color: var(--durazno);
+            text-decoration: none;
+            font-size: 15px;
+            transition: .3s ease;
+        }
+
+        .menu a:hover {
+            color: var(--crema);
+        }
+
+        /* TÍTULO */
+        h1.titulo {
+            text-align: center;
+            margin-top: 130px; /* ESPACIO para que no choque con el header */
+            font-size: 40px;
+            color: var(--durazno);
+            font-family: 'Homemade Apple', cursive;
+        }
+
+        /* TARJETA */
+        .album-card {
+            width:85%;
+            max-width:900px;
+            margin:20px auto 40px;
+            background:var(--nude);
+            color:var(--cafe);
+            padding:25px;
+            border-radius:10px;
+            box-shadow:0 8px 30px rgba(0,0,0,0.28);
+        }
+
+        .album-card img {
+            width:100%;
+            height:320px;
+            object-fit:cover;
+            border-radius:8px;
+        }
+
+        .album-card h2 {
+            font-size:30px;
+            margin-top:15px;
+            color:var(--rojo);
+        }
+
+        .album-card a {
+            display:inline-block;
+            margin-top:10px;
+            padding:8px 22px;
+            background:var(--rojo);
+            color:var(--blanco);
+            text-decoration:none;
+            border-radius:4px;
+            transition:0.3s;
+        }
+
+        .album-card a:hover {
+            background:var(--durazno);
+            color:var(--rojo);
+        }
+
+        /* TARIFAS */
+        .accordion {
+            width:85%;
+            max-width:900px;
+            margin:40px auto;
+        }
+
+        .acc-item {
+            margin-bottom:18px;
+        }
+
+        .acc-title {
+            background:var(--crema);
+            color:var(--rojo);
+            padding:18px;
+            font-size:20px;
+            font-weight:bold;
+            border-radius:6px;
+            cursor:pointer;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .acc-title span {
+            font-size:26px;
+        }
+
+        .acc-content {
+            display:none;
+            background:var(--nude);
+            padding:20px;
+            border-radius:0 0 6px 6px;
+            box-shadow:0 4px 18px rgba(0,0,0,0.25);
+            color:var(--cafe);
+        }
+
+        /* SERVICIOS ADICIONALES */
+        .extras {
+            width:85%;
+            max-width:900px;
+            margin:60px auto;
+        }
+
+        .extras h2 {
+            color:var(--durazno);
+            font-size:28px;
+            margin-bottom:10px;
+        }
+
+        .extra-box {
+            background:var(--nude);
+            padding:20px;
+            border-radius:10px;
+            margin-bottom:20px;
+            color:var(--cafe);
+            box-shadow:0 6px 20px rgba(0,0,0,0.25);
+        }
+
+        .extra-box img {
+            width:140px;
+            height:140px;
+            object-fit:cover;
+            border-radius:8px;
+            margin-bottom:8px;
+        }
+
+        .volver {
+            display: block;
+            text-align: center;
+            margin: 50px 0;
+            color: var(--crema);
+        }
+    </style>
+
+    <script>
+        function toggleAcc(i){
+            let content=document.getElementById('acc'+i);
+            content.style.display = content.style.display==='block' ? 'none':'block';
+        }
+    </script>
+
+</head>
+<body>
+
+<header>
+    <a href="index.html">
+        <img src="img/logo-terracota.png" class="logo-header">
+    </a>
+
+    <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="bodas.html">Bodas</a>
+        <a href="maternidad.html">Maternidad</a>
+        <a href="infantil.html">Infantil</a>
+        <a href="amelia.html">Amelia</a>
+    </nav>
+</header>
+
+<h1 class="titulo">Infantil</h1>
+
+<!-- TARJETA -->
+<div class="album-card">
+    <img src="img/nino-11.JPG">
+    <h2>Álbum Infantil – Retratos</h2>
+    <p>Niños, familias y retratos naturales llenos de emoción.</p>
+    <a href="mateo.html">Ver álbum</a>
+</div>
+
+<!-- TARIFAS -->
+<div class="accordion">
+
+    <!-- PLAN 1 -->
+    <div class="acc-item">
+        <div class="acc-title" onclick="toggleAcc(1)">
+            Plan Básico – $250.000 COP
+            <span>+</span>
+        </div>
+        <div class="acc-content" id="acc1">
+            <p><b>Incluye:</b></p>
+            <ul>
+                <li>2 horas de sesión</li>
+                <li>Locación exterior o estudio</li>
+                <li>20 fotografías editadas</li>
+                <li>Dirección de poses</li>
+                <li>Galería digital privada</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- PLAN 2 -->
+    <div class="acc-item">
+        <div class="acc-title" onclick="toggleAcc(2)">
+            Plan Completo – $500.000 COP
+            <span>+</span>
+        </div>
+        <div class="acc-content" id="acc2">
+            <p><b>Incluye:</b></p>
+            <ul>
+                <li>4 horas de sesión</li>
+                <li>Locación exterior o estudio</li>
+                <li>40 fotografías editadas</li>
+                <li>Galería digital privada</li>
+                <li>Álbum sencillo 20×20 cm (10 páginas)</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<!-- SERVICIOS ADICIONALES -->
+<div class="extras">
+    <h2>Servicios adicionales</h2>
+
+    <div class="extra-box">
+        <img src="img/bordado.jpg">
+        <p><b>Pandero bordado con fotografía</b><br>
+        Desde $220.000 COP – $350.000 COP</p>
+    </div>
+
+    <div class="extra-box">
+        <img src="img/retrato.JPG">
+        <p><b>Retrato impresos / Fine Portrait</b><br>
+        $60.000 – $85.000 COP</p>
+    </div>
+
+    <div class="extra-box">
+        <img src="img/triptico.JPG">
+        <p><b>Tríptico decorativo</b><br>
+        $450.000 COP</p>
+    </div>
+
+    <div class="extra-box">
+        <img src="img/album-1.JPG">
+        <p><b>Photobook sencillo</b><br>
+        $300.000 COP</p>
+    </div>
+
+</div>
+
+<a href="index.html" class="volver">← Volver al inicio</a> 
+
+</body>
+</html>
