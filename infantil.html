@@ -71,7 +71,7 @@
         /* TÍTULO */
         h1.titulo {
             text-align: center;
-            margin-top: 130px; /* ESPACIO para que no choque con el header */
+            margin-top: 130px;
             font-size: 40px;
             color: var(--durazno);
             font-family: 'Homemade Apple', cursive;
@@ -125,9 +125,7 @@
             margin:40px auto;
         }
 
-        .acc-item {
-            margin-bottom:18px;
-        }
+        .acc-item { margin-bottom:18px; }
 
         .acc-title {
             background:var(--crema);
@@ -142,9 +140,7 @@
             align-items:center;
         }
 
-        .acc-title span {
-            font-size:26px;
-        }
+        .acc-title span { font-size:26px; }
 
         .acc-content {
             display:none;
@@ -186,10 +182,11 @@
         }
 
         .volver {
-            display: block;
-            text-align: center;
-            margin: 50px 0;
-            color: var(--crema);
+            display:block;
+            text-align:center;
+            margin:50px 0;
+            color:var(--crema);
+            text-decoration:none;
         }
     </style>
 
@@ -219,9 +216,9 @@
 
 <h1 class="titulo">Infantil</h1>
 
-<!-- TARJETA -->
+<!-- TARJETA PRINCIPAL -->
 <div class="album-card">
-    <img src="img/nino-11.JPG">
+    <img src="img/nino-11.jpg">
     <h2>Álbum Infantil – Retratos</h2>
     <p>Niños, familias y retratos naturales llenos de emoción.</p>
     <a href="mateo.html">Ver álbum</a>
@@ -230,7 +227,6 @@
 <!-- TARIFAS -->
 <div class="accordion">
 
-    <!-- PLAN 1 -->
     <div class="acc-item">
         <div class="acc-title" onclick="toggleAcc(1)">
             Plan Básico – $250.000 COP
@@ -248,7 +244,6 @@
         </div>
     </div>
 
-    <!-- PLAN 2 -->
     <div class="acc-item">
         <div class="acc-title" onclick="toggleAcc(2)">
             Plan Completo – $500.000 COP
@@ -279,26 +274,26 @@
     </div>
 
     <div class="extra-box">
-        <img src="img/retrato.JPG">
-        <p><b>Retrato impresos / Fine Portrait</b><br>
+        <img src="img/retrato.jpg">
+        <p><b>Retratos impresos / Fine Portrait</b><br>
         $60.000 – $85.000 COP</p>
     </div>
 
     <div class="extra-box">
-        <img src="img/triptico.JPG">
+        <img src="img/triptico.jpg">
         <p><b>Tríptico decorativo</b><br>
         $450.000 COP</p>
     </div>
 
     <div class="extra-box">
-        <img src="img/album-1.JPG">
+        <img src="img/album-1.jpg">
         <p><b>Photobook sencillo</b><br>
         $300.000 COP</p>
     </div>
 
 </div>
 
-<a href="index.html" class="volver">← Volver al inicio</a> 
+<a href="index.html" class="volver">← Volver al inicio</a>
 
 </body>
 </html>
