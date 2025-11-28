@@ -8,39 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
 
     <style>
-            /* LOGO SUPERIOR DERECHA */
-.logo-header {
-    position: absolute;
-    top: 18px;
-    right: 35px;
-    width: 70px;
-    opacity: 0.9;
-    transition: transform .3s ease, opacity .3s ease;
-    cursor: pointer;
-}
-
-.logo-header:hover {
-    transform: scale(1.05);
-    opacity: 1;
-}
-
-        :root {
-            --rojo: #971600;
-            --durazno: #F4A676;
-            --crema: #F8D3A0;
-            --nude: #EAD7C2;
-            --blanco-calido: #F7F1EB;
-            --cafe: #4B2B1F;
-        }
-
-        body {
-            margin: 0;
-            background: var(--rojo);
-            font-family: "Courier New", monospace;
-            color: var(--nude);
-        }
-
-        header/* LOGO SUPERIOR IZQUIERDA */
+/* LOGO SUPERIOR IZQUIERDA */
 .logo-header {
     position: absolute;
     top: 18px;
@@ -57,6 +25,23 @@
     opacity: 1;
 }
 
+:root {
+    --rojo: #971600;
+    --durazno: #F4A676;
+    --crema: #F8D3A0;
+    --nude: #EAD7C2;
+    --blanco-calido: #F7F1EB;
+    --cafe: #4B2B1F;
+}
+
+body {
+    margin: 0;
+    background: var(--rojo);
+    font-family: "Courier New", monospace;
+    color: var(--nude);
+}
+
+/* HEADER */
 header {
     position: relative;
     width: 100%;
@@ -83,203 +68,189 @@ header {
     color: var(--crema);
 }
 
-        nav a {
-            margin-left: 25px;
-            color: var(--durazno);
-            text-decoration: none;
-            transition: .3s;
-        }
-        nav a:hover { color: var(--crema); }
+h1.titulo {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 40px;
+    color: var(--durazno);
+    font-family: 'Homemade Apple', cursive;
+}
 
-        h1.titulo {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 40px;
-            color: var(--durazno);
-            font-family: 'Homemade Apple', cursive;
-        }
+/* Álbumes */
+.albumes-bodas {
+    padding: 40px 20px;
+    text-align: center;
+}
 
+.subtitulo-bodas {
+    font-size: 26px;
+    color: var(--crema);
+    margin-bottom: 25px;
+}
 
-        /* Álbumes */
-        .albumes-bodas {
-            padding: 40px 20px;
-            text-align: center;
-        }
+.contenedor-albumes {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
 
-        .subtitulo-bodas {
-            font-size: 26px;
-            color: var(--crema);
-            margin-bottom: 25px;
-        }
+/* TARJETAS */
+.album-card {
+    background: var(--nude);
+    padding: 28px;
+    border-radius: 14px;
+    text-decoration: none;
+    width: 380px;
+    color: var(--cafe);
+    transition: .3s ease;
+    box-shadow: 0 8px 26px rgba(0,0,0,0.28);
+}
 
-        .contenedor-albumes {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            flex-wrap: wrap;
-        }
+.album-card:hover {
+    transform: translateY(-10px) scale(1.03);
+}
 
-        /* TARJETAS MAXI EDITORIALES */
-        .album-card {
-            background: var(--nude);
-            padding: 28px;
-            border-radius: 14px;
-            text-decoration: none;
-            width: 380px;
-            color: var(--cafe);
-            transition: .3s ease;
-            box-shadow: 0 8px 26px rgba(0,0,0,0.28);
-        }
+.album-card img {
+    width: 100%;
+    height: 320px;
+    border-radius: 14px;
+    object-fit: cover;
+}
 
-        .album-card:hover {
-            transform: translateY(-10px) scale(1.03);
-        }
+.album-card h3 {
+    margin-top: 18px;
+    color: var(--rojo);
+    font-size: 22px;
+    letter-spacing: 1px;
+}
 
-        .album-card img {
-            width: 100%;
-            height: 320px;
-            border-radius: 14px;
-            object-fit: cover;
-        }
+.album-card p {
+    font-size: 15px;
+    opacity: .85;
+    margin-top: 6px;
+}
 
-        .album-card h3 {
-            margin-top: 18px;
-            color: var(--rojo);
-            font-size: 22px;
-            letter-spacing: 1px;
-        }
+/* ACORDEÓN */
+.acordeon {
+    max-width: 750px;
+    margin: 60px auto;
+}
 
-        .album-card p {
-            font-size: 15px;
-            opacity: .85;
-            margin-top: 6px;
-        }
+.acordeon-item {
+    background: var(--nude);
+    border-radius: 10px;
+    border: 1px solid var(--crema);
+    margin-bottom: 12px;
+}
 
-        /* Acordeón */
-        .acordeon {
-            max-width: 750px;
-            margin: 60px auto;
-        }
+.acordeon-titulo {
+    padding: 16px;
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--rojo);
+    background: var(--crema);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        .acordeon-item {
-            background: var(--nude);
-            border-radius: 10px;
-            border: 1px solid var(--crema);
-            margin-bottom: 12px;
-        }
+.acordeon-flecha {
+    transition: transform .3s ease;
+}
 
-        .acordeon-titulo {
-            padding: 16px;
-            cursor: pointer;
-            font-size: 18px;
-            color: var(--rojo);
-            background: var(--crema);
-        }
+.acordeon-item.open .acordeon-flecha {
+    transform: rotate(180deg);
+}
 
-        .acordeon-contenido {
-            padding: 18px;
-            display: none;
-            color: var(--cafe);
-            font-size: 14px;
-            line-height: 1.6;
-        }
+.acordeon-contenido {
+    padding: 18px;
+    display: none;
+    color: var(--cafe);
+    font-size: 14px;
+    line-height: 1.6;
+}
 
-        /* Servicios adicionales */
-        .servicios {
-            margin-top: 70px;
-            padding: 0 20px;
-        }
+/* SERVICIOS ADICIONALES */
+.servicios {
+    margin-top: 70px;
+    padding: 0 20px;
+}
 
-        .servicios-grid-relajada {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 60px;
-            justify-items: center;
-        }
+.servicios-grid-relajada {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 60px;
+    justify-items: center;
+}
 
-        .servicio-item-relajado {
-            background: var(--nude);
-            padding: 26px;
-            border-radius: 12px;
-            max-width: 350px;
-            text-align: center;
-            box-shadow: 0 6px 22px rgba(0,0,0,0.25);
-        }
+.servicio-item-relajado {
+    background: var(--nude);
+    padding: 26px;
+    border-radius: 12px;
+    max-width: 350px;
+    text-align: center;
+    box-shadow: 0 6px 22px rgba(0,0,0,0.25);
+}
 
-        .servicio-item-relajado img {
-            max-width: 220px;
-            border-radius: 12px;
-            margin-bottom: 16px;
-        }
+.servicio-item-relajado img {
+    max-width: 220px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
 
-        .servicio-item-relajado h3 {
-            color: var(--rojo);
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
+.servicio-item-relajado h3 {
+    color: var(--rojo);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
 
-        .servicio-item-relajado p {
-            color: var(--cafe);
-            font-size: 15px;
-            line-height: 1.4;
-            opacity: .95;
-        }
+.servicio-item-relajado p {
+    color: var(--cafe);
+    font-size: 15px;
+    line-height: 1.4;
+    opacity: .95;
+}
 
-        /* Pago */
-        .pago {
-            max-width: 750px;
-            padding: 25px;
-            background: var(--nude);
-            margin: 60px auto;
-            border-radius: 10px;
-            color: var(--cafe);
-        }
+/* PAGO */
+.pago {
+    max-width: 750px;
+    padding: 25px;
+    background: var(--nude);
+    margin: 60px auto;
+    border-radius: 10px;
+    color: var(--cafe);
+}
 
-        .volver {
-            display: block;
-            text-align: center;
-            margin: 50px 0;
-            color: var(--crema);
-            text-decoration: none;
-        }
+.volver {
+    display: block;
+    text-align: center;
+    margin: 50px 0;
+    color: var(--crema);
+    text-decoration: none;
+}
     </style>
 
     <script>
-        
-        function toggleAcordeon(id) {
-            const cont = document.getElementById(id);
-            cont.style.display = cont.style.display === "block" ? "none" : "block";
+        function toggleAcordeon(contentId, itemId) {
+            const contenido = document.getElementById(contentId);
+            const item = document.getElementById(itemId);
+            const isOpen = contenido.style.display === "block";
+
+            contenido.style.display = isOpen ? "none" : "block";
+            if (isOpen) { item.classList.remove("open"); }
+            else { item.classList.add("open"); }
         }
     </script>
-    <script>
-function toggleAcordeon(contentId, itemId) {
-    const contenido = document.getElementById(contentId);
-    const item = document.getElementById(itemId);
-    const isOpen = contenido.style.display === "block";
-
-    contenido.style.display = isOpen ? "none" : "block";
-
-    if (isOpen) {
-        item.classList.remove("open");
-    } else {
-        item.classList.add("open");
-    }
-}
-</script>
-
-
 </head>
 
 <body>
 
-< <header>
-
-    <!-- LOGO IZQUIERDA -->
+<header>
     <a href="index.html">
         <img src="img/logo-terracota.png" class="logo-header">
     </a>
 
-    <!-- MENÚ DERECHA -->
     <nav class="menu">
         <a href="index.html">Inicio</a>
         <a href="bodas.html">Bodas</a>
@@ -287,8 +258,8 @@ function toggleAcordeon(contentId, itemId) {
         <a href="infantil.html">Infantil</a>
         <a href="amelia.html">Amelia</a>
     </nav>
-
 </header>
+
 <h1 class="titulo">BODAS</h1>
 
 <!-- Álbumes -->
@@ -298,13 +269,13 @@ function toggleAcordeon(contentId, itemId) {
     <div class="contenedor-albumes">
 
         <a href="leoyevi.html" class="album-card">
-            <img src="img/leoyevi-1.JPG">
+            <img src="img/leoyevi-1.jpg">
             <h3>Leo & Evi</h3>
             <p>Boda cálida, íntima y luminosa.</p>
         </a>
 
         <a href="juanylili.html" class="album-card">
-            <img src="img/juanylili-3.JPG">
+            <img src="img/juanylili-3.jpg">
             <h3>Juan & Lili</h3>
             <p>Una historia espontánea y llena de luz.</p>
         </a>
@@ -347,7 +318,7 @@ function toggleAcordeon(contentId, itemId) {
 
             <ul>
                 <li>Entrega de mínimo 100 fotografías editadas con nuestra colorización estilo Sol de Verano</li>
-                <li>Galería digital privada para visualizar y descargar desde cualquier dispositivo</li>
+                <li>Galería digital privada</li>
                 <li>Reel de 60 segundos</li>
             </ul>
 
@@ -460,7 +431,7 @@ function toggleAcordeon(contentId, itemId) {
         </div>
 
         <div class="servicio-item-relajado">
-            <img src="img/triptico.JPG">
+            <img src="img/triptico.jpg">
             <h3>Tríptico — $450.000</h3>
             <p>Composición editorial de 3 fotografías.</p>
         </div>
@@ -472,14 +443,14 @@ function toggleAcordeon(contentId, itemId) {
         </div>
 
         <div class="servicio-item-relajado">
-            <img src="img/leoyevi-12.JPG">
+            <img src="img/leoyevi-12.jpg">
             <h3>Hora adicional — $150.000</h3>
             <p>Amplía la cobertura de tu evento.</p>
         </div>
 
         <div class="servicio-item-relajado">
-            <img src="img/album-1.JPG">
-            <h3>Photobook 20×20 — $350.000 - 18 páginas</h3>
+            <img src="img/album-1.jpg">
+            <h3>Photobook 20×20 — $350.000 — 18 páginas</h3>
             <p>Álbum Amelia con tus fotos favoritas.</p>
         </div>
 
