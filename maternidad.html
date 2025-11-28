@@ -8,38 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
 
     <style>
-        /* LOGO SUPERIOR DERECHA */
-.logo-header {
-    position: absolute;
-    top: 18px;
-    right: 35px;
-    width: 70px;
-    opacity: 0.9;
-    transition: transform .3s ease, opacity .3s ease;
-    cursor: pointer;
-}
-
-.logo-header:hover {
-    transform: scale(1.05);
-    opacity: 1;
-}
-
-        /* LOGO SUPERIOR DERECHA */
-.logo-header {
-    position: absolute;
-    top: 18px;
-    right: 35px;
-    width: 70px;
-    opacity: 0.9;
-    transition: transform .3s ease, opacity .3s ease;
-    cursor: pointer;
-}
-
-.logo-header:hover {
-    transform: scale(1.05);
-    opacity: 1;
-}
-
         :root {
             --rojo: #971600;
             --durazno: #F4A676;
@@ -56,56 +24,48 @@
             color: var(--nude);
         }
 
-        header/* LOGO SUPERIOR IZQUIERDA */
-.logo-header {
-    position: absolute;
-    top: 18px;
-    left: 35px;
-    width: 70px;
-    opacity: 0.9;
-    transition: transform .3s ease, opacity .3s ease;
-    cursor: pointer;
-    z-index: 1000;
-}
+        /* LOGO SUPERIOR IZQUIERDA */
+        .logo-header {
+            position: absolute;
+            top: 18px;
+            left: 35px;
+            width: 70px;
+            opacity: 0.9;
+            transition: transform .3s ease, opacity .3s ease;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        .logo-header:hover {
+            transform: scale(1.05);
+            opacity: 1;
+        }
 
-.logo-header:hover {
-    transform: scale(1.05);
-    opacity: 1;
-}
+        /* HEADER */
+        header {
+            position: relative;
+            width: 100%;
+            height: 90px;
+        }
 
-header {
-    position: relative;
-    width: 100%;
-    height: 90px;
-}
+        /* MENÚ SUPERIOR DERECHA */
+        .menu {
+            position: absolute;
+            top: 35px;
+            right: 40px;
+            display: flex;
+            gap: 24px;
+        }
 
-/* MENÚ SUPERIOR DERECHA */
-.menu {
-    position: absolute;
-    top: 35px;
-    right: 40px;
-    display: flex;
-    gap: 24px;
-}
-
-.menu a {
-    color: var(--durazno);
-    text-decoration: none;
-    font-size: 15px;
-    transition: .3s ease;
-}
-
-.menu a:hover {
-    color: var(--crema);
-}
-
-        nav a {
-            margin-left: 25px;
+        .menu a {
             color: var(--durazno);
             text-decoration: none;
-            transition: .3s;
+            font-size: 15px;
+            transition: .3s ease;
         }
-        nav a:hover { color: var(--crema); }
+
+        .menu a:hover {
+            color: var(--crema);
+        }
 
         h1.titulo {
             text-align: center;
@@ -245,8 +205,7 @@ header {
             const isOpen = contenido.style.display === "block";
 
             contenido.style.display = isOpen ? "none" : "block";
-            if (isOpen) { item.classList.remove("open"); }
-            else { item.classList.add("open"); }
+            item.classList.toggle("open", !isOpen);
         }
     </script>
 </head>
@@ -254,15 +213,10 @@ header {
 <body>
 
 <header>
-    
-    <header>
-
-    <!-- LOGO IZQUIERDA -->
     <a href="index.html">
         <img src="img/logo-terracota.png" class="logo-header">
     </a>
 
-    <!-- MENÚ DERECHA -->
     <nav class="menu">
         <a href="index.html">Inicio</a>
         <a href="bodas.html">Bodas</a>
@@ -270,9 +224,6 @@ header {
         <a href="infantil.html">Infantil</a>
         <a href="amelia.html">Amelia</a>
     </nav>
-
-</header>
-
 </header>
 
 <h1 class="titulo">Maternidad</h1>
@@ -282,19 +233,17 @@ header {
     <h2 style="text-align:center; color:var(--crema); margin-bottom:20px;">Álbumes</h2>
 
     <div class="albumes-grid">
-        <!-- CARD SANTI Y LU -->
         <a href="santiylu.html" class="album-card">
-            <img src="img/maternidad-4.JPG">
+            <img src="img/maternidad-4.jpg">
             <h3>Santi y Lu</h3>
             <p>Una espera cálida, íntima y luminosa.</p>
         </a>
     </div>
 </section>
 
-<!-- TARIFAS (Las del PDF) -->
+<!-- TARIFAS -->
 <h2 style="text-align:center; color:var(--durazno); margin-top:60px;">Tarifas</h2>
 
-<!-- Exterior -->
 <div class="acordeon-item" id="item-ext">
     <div class="acordeon-titulo" onclick="toggleAcordeon('ext','item-ext')">
         Exteriores – Plan Esencial
@@ -306,15 +255,14 @@ header {
         <ul>
             <li>2 horas de sesión</li>
             <li>Locación exterior elegida por la mamá</li>
-            <li>25 fotografías editadas estilo Sol de Verano</li>
+            <li>25 fotografías editadas</li>
             <li>Galería digital privada</li>
-            <li>Asesoría de vestuario (2–3 outfits)</li>
+            <li>Asesoría de vestuario</li>
             <li>Dirección completa de poses</li>
         </ul>
     </div>
 </div>
 
-<!-- Estudio -->
 <div class="acordeon-item" id="item-est">
     <div class="acordeon-titulo" onclick="toggleAcordeon('est','item-est')">
         Sesiones en Estudio – Plan Esencial
@@ -325,60 +273,59 @@ header {
         <p><strong style="color:var(--rojo);">Inversión: $480.000 COP</strong></p>
         <ul>
             <li>2 horas de sesión</li>
-            <li>Diferentes esquemas de luz y poses</li>
+            <li>Esquemas de luz variados</li>
             <li>20 fotografías editadas</li>
             <li>Galería digital privada</li>
-            <li>Uso de props básicos</li>
+            <li>Uso de props</li>
         </ul>
     </div>
 </div>
 
-
-<!-- SERVICIOS ADICIONALES (IGUAL QUE BODAS) -->
+<!-- SERVICIOS ADICIONALES -->
 <h2 style="text-align:center; color:var(--crema); margin-top:70px;">Servicios adicionales</h2>
 
 <div class="servicios-grid">
+
     <div class="servicio-card">
         <img src="img/bordado.jpg">
         <h3>Pandero bordado — $220.000 – $350.000</h3>
-        <p>Pieza artesanal con fotografía impresa y bordado personalizado.</p>
+        <p>Pieza artesanal con fotografía impresa.</p>
     </div>
 
     <div class="servicio-card">
         <img src="img/retrato.jpg">
         <h3>Retratos exterior — $150.000</h3>
-        <p>1 hora de sesión, mínimo 10 fotos editadas.</p>
+        <p>1 hora de sesión · 10 fotos editadas.</p>
     </div>
 
     <div class="servicio-card">
-        <img src="img/triptico.JPG">
+        <img src="img/triptico.jpg">
         <h3>Tríptico — $450.000</h3>
         <p>Decoración elegante de 3 fotografías.</p>
     </div>
 
     <div class="servicio-card">
-        <img src="img/maternidad-5.JPG">
+        <img src="img/maternidad-5.jpg">
         <h3>Foto adicional — $12.000</h3>
-        <p>Agrega fotos adicionales editadas.</p>
+        <p>Perfección en cada detalle adicional.</p>
     </div>
 
     <div class="servicio-card">
-        <img src="img/maternidad-8.JPG">
+        <img src="img/maternidad-8.jpg">
         <h3>Hora adicional — $150.000</h3>
-        <p>Añade tiempo extendido a tu sesión.</p>
+        <p>Extiende el tiempo de tu sesión.</p>
     </div>
 
     <div class="servicio-card">
-        <img src="img/album-1.JPG">
+        <img src="img/album-1.jpg">
         <h3>Photobook 20×20 — $180.000</h3>
         <p>Álbum sencillo en tapa lino.</p>
     </div>
+
 </div>
 
-<!-- PAGO -->
 <section class="pago">
     <h2 style="color:var(--rojo); text-align:center;">Detalles de pago</h2>
-
     <p>• 50% para reservar la fecha</p>
     <p>• 50% el día de la sesión</p>
     <p>• Métodos: Bancolombia, Nequi, efectivo</p>
