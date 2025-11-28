@@ -10,20 +10,20 @@
 
     <style>
         /* LOGO SUPERIOR DERECHA */
-.logo-header {
-    position: absolute;
-    top: 18px;
-    right: 35px;
-    width: 70px;
-    opacity: 0.9;
-    transition: transform .3s ease, opacity .3s ease;
-    cursor: pointer;
-}
+        .logo-header {
+            position: absolute;
+            top: 18px;
+            right: 35px;
+            width: 70px;
+            opacity: 0.9;
+            transition: transform .3s ease, opacity .3s ease;
+            cursor: pointer;
+        }
 
-.logo-header:hover {
-    transform: scale(1.05);
-    opacity: 1;
-}
+        .logo-header:hover {
+            transform: scale(1.05);
+            opacity: 1;
+        }
 
         :root {
             --rojo: #971600;
@@ -42,7 +42,7 @@
             overflow-x: hidden;
         }
 
-        /* ---------------- HEADER ---------------- */
+        /* HEADER */
         header {
             padding: 25px 40px;
             display: flex;
@@ -75,7 +75,7 @@
             color: var(--crema);
         }
 
-        /* ---------------- TITULAR ---------------- */
+        /* TITULAR */
         .page-title {
             text-align: center;
             margin-top: 40px;
@@ -84,7 +84,7 @@
             color: var(--crema);
             opacity: 0;
             animation: fadeUp 1.2s ease forwards;
-           font-family: 'Homemade Apple', cursive;
+            font-family: 'Homemade Apple', cursive;
         }
 
         .subtitle {
@@ -99,33 +99,32 @@
             line-height: 1.5;
         }
 
-        /* ---------------- GALERÍA ---------------- */
-       
+        /* GALERÍA */
         .gallery {
-            width:90%;
-            max-width:1100px;
-            margin:30px auto 60px;
-            display:grid;
-            grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
-            gap:18px;
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto 60px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+            gap: 18px;
         }
 
         .gallery img {
-            width:100%;
-            height:320px;
-            object-fit:cover;
-            border-radius:8px;
-            cursor:pointer;
-            box-shadow:0 6px 18px rgba(0,0,0,0.35);
-            transition:transform .3s, box-shadow .3s;
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+            transition: transform .3s, box-shadow .3s;
         }
 
         .gallery img:hover {
-            transform:translateY(-4px);
-            box-shadow:0 10px 24px rgba(0,0,0,0.45);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 24px rgba(0,0,0,0.45);
         }
 
-        /* ---------------- LIGHTBOX ---------------- */
+        /* LIGHTBOX */
         .lightbox {
             position: fixed;
             top: 0;
@@ -167,7 +166,7 @@
         .arrow.left { left: 30px; }
         .arrow.right { right: 30px; }
 
-        /* ------- BOTÓN VOLVER ------- */
+        /* BOTÓN VOLVER */
         .back {
             display: block;
             width: fit-content;
@@ -186,7 +185,7 @@
             color: var(--rojo);
         }
 
-        /* ------- ANIMACIONES ------- */
+        /* ANIMACIONES */
         @keyframes fadeUp {
             0% { opacity: 0; transform: translateY(12px); }
             100% { opacity: 1; transform: translateY(0); }
@@ -223,16 +222,16 @@
 <!-- GALERÍA -->
 <section class="gallery">
 
-    <div class="photo-card"><img src="img/album-1.JPG"></div>
-    <div class="photo-card"><img src="img/album-2.JPG"></div>
-    <div class="photo-card"><img src="img/album-3.JPG"></div>
-    <div class="photo-card"><img src="img/album-4.JPG"></div>
-    <div class="photo-card"><img src="img/album-5.JPG"></div>
-    <div class="photo-card"><img src="img/album-6.JPG"></div>
-    <div class="photo-card"><img src="img/album-7.JPG"></div>
-    <div class="photo-card"><img src="img/album-8.JPG"></div>
-    <div class="photo-card"><img src="img/album-9.JPG"></div>
-    <div class="photo-card"><img src="img/album-10.JPG"></div>
+    <div class="photo-card"><img src="img/album-1.jpg"></div>
+    <div class="photo-card"><img src="img/album-2.jpg"></div>
+    <div class="photo-card"><img src="img/album-3.jpg"></div>
+    <div class="photo-card"><img src="img/album-4.jpg"></div>
+    <div class="photo-card"><img src="img/album-5.jpg"></div>
+    <div class="photo-card"><img src="img/album-6.jpg"></div>
+    <div class="photo-card"><img src="img/album-7.jpg"></div>
+    <div class="photo-card"><img src="img/album-8.jpg"></div>
+    <div class="photo-card"><img src="img/album-9.jpg"></div>
+    <div class="photo-card"><img src="img/album-10.jpg"></div>
 
 </section>
 
