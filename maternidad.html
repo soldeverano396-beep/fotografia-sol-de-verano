@@ -75,7 +75,7 @@
             font-family: 'Homemade Apple', cursive;
         }
 
-        /* -------- TARJETAS DE ALBUM -------- */
+        /* TARJETAS DE ÁLBUM */
         .albumes-grid {
             display: flex;
             justify-content: center;
@@ -103,18 +103,20 @@
             object-fit: cover;
             border-radius: 14px;
         }
+
         .album-card h3 {
             margin-top: 18px;
             color: var(--rojo);
             font-size: 22px;
         }
+
         .album-card p {
             font-size: 15px;
             opacity: .85;
             margin-top: 6px;
         }
 
-        /* -------- ACORDEÓN -------- */
+        /* ACORDEÓN */
         .acordeon-item {
             background: var(--nude);
             border-radius: 10px;
@@ -133,23 +135,25 @@
             justify-content: space-between;
             align-items: center;
         }
+
         .acordeon-flecha {
             transition: transform .3s ease;
             font-size: 18px;
             color: var(--rojo);
         }
+
         .acordeon-item.open .acordeon-flecha {
             transform: rotate(180deg);
         }
 
         .acordeon-contenido {
             padding: 18px;
-            color: var(--cafe);
             display: none;
+            color: var(--cafe);
             line-height: 1.6;
         }
 
-        /* -------- SERVICIOS -------- */
+        /* SERVICIOS */
         .servicios-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -166,21 +170,24 @@
             text-align: center;
             box-shadow: 0 6px 22px rgba(0,0,0,0.25);
         }
+
         .servicio-card img {
             max-width: 200px;
             border-radius: 12px;
             margin-bottom: 16px;
         }
+
         .servicio-card h3 {
             color: var(--rojo);
             margin-bottom: 10px;
         }
+
         .servicio-card p {
             color: var(--cafe);
             line-height: 1.4;
         }
 
-        /* -------- PAGO -------- */
+        /* PAGO */
         .pago {
             max-width: 750px;
             padding: 25px;
@@ -228,7 +235,6 @@
 
 <h1 class="titulo">Maternidad</h1>
 
-<!-- ÁLBUMES -->
 <section>
     <h2 style="text-align:center; color:var(--crema); margin-bottom:20px;">Álbumes</h2>
 
@@ -241,7 +247,6 @@
     </div>
 </section>
 
-<!-- TARIFAS -->
 <h2 style="text-align:center; color:var(--durazno); margin-top:60px;">Tarifas</h2>
 
 <div class="acordeon-item" id="item-ext">
@@ -281,7 +286,6 @@
     </div>
 </div>
 
-<!-- SERVICIOS ADICIONALES -->
 <h2 style="text-align:center; color:var(--crema); margin-top:70px;">Servicios adicionales</h2>
 
 <div class="servicios-grid">
@@ -335,3 +339,4 @@
 
 </body>
 </html>
+
