@@ -214,6 +214,26 @@
             opacity: 0.85;
         }
 
+        /* WHATSAPP FLOAT */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 22px;
+            right: 22px;
+            z-index: 2000;
+        }
+
+        .whatsapp-float img {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            transition: transform .3s ease;
+        }
+
+        .whatsapp-float img:hover {
+            transform: scale(1.08);
+        }
+
         @keyframes fadeUp {
             0% { opacity: 0; transform: translateY(12px); }
             100% { opacity: 1; transform: translateY(0); }
@@ -224,7 +244,7 @@
 <body>
 
 <header>
-    <!-- LOGO EN IZQUIERDA REMOVIDO -->
+    <!-- LOGO ELIMINADO DE LA IZQUIERDA -->
 
     <nav class="menu">
         <a href="index.html">Inicio</a>
@@ -300,12 +320,17 @@
 <section class="cta" id="contacto">
     <h2>¿Agendamos tu historia?</h2>
    <a href="https://wa.me/573133051492?text=Hola%20Susan%20🌞%20encontré%20tu%20página%20y%20quiero%20saber%20más%20sobre%20tus%20sesiones.">Escríbeme</a>
-
 </section>
 
 <footer>
     © 2025 Sol de Verano · Fotografía Social
 </footer>
+
+<!-- WHATSAPP FLOTANTE -->
+<a href="https://wa.me/573133051492?text=Hola%20Susan%20🌞%20quiero%20información%20de%20fotografía"
+   class="whatsapp-float" target="_blank">
+    <img src="img/whatsapp.png">
+</a>
 
 </body>
 </html>
