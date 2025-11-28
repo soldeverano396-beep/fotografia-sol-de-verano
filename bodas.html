@@ -8,6 +8,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
 
     <style>
+        /* ICONO WHATSAPP FLOTANTE */
+.whatsapp-float {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    z-index: 2000;
+}
+
+.whatsapp-float img {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: transform .3s ease;
+}
+
+.whatsapp-float img:hover {
+    transform: scale(1.08);
+}
+
 /* LOGO SUPERIOR IZQUIERDA */
 .logo-header {
     position: absolute;
@@ -34,7 +54,14 @@
     --cafe: #4B2B1F;
 }
 
-body {
+body
+<!-- WHATSAPP FLOTANTE -->
+<a href="https://wa.me/573133051492?text=Hola%20Susan%20🌞%20encontré%20tu%20página%20y%20quiero%20saber%20más%20sobre%20tus%20sesiones." 
+   class="whatsapp-float" target="_blank">
+    <img src="img/whatsapp.png" alt="WhatsApp">
+</a>
+        
+{
     margin: 0;
     background: var(--rojo);
     font-family: "Courier New", monospace;
