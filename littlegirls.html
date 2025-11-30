@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Girls | Sol de Verano</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --rojo:#971600;
+            --durazno:#F4A676;
+            --crema:#F8D3A0;
+            --nude:#EAD7C2;
+            --blanco:#F7F1EB;
+            --cafe:#4B2B1F;
+        }
+
+        body {
+            margin:0;
+            background:var(--rojo);
+            font-family:"Courier New", monospace;
+            color:var(--nude);
+        }
+
+        /* LOGO */
+        .logo-header {
+            position:absolute;
+            top:18px;
+            left:35px;
+            width:70px;
+            opacity:.9;
+            cursor:pointer;
+            transition:.3s ease;
+        }
+
+        .logo-header:hover {
+            transform:scale(1.05);
+            opacity:1;
+        }
+
+        /* MENÚ */
+        .menu {
+            position:absolute;
+            top:35px;
+            right:40px;
+            display:flex;
+            gap:24px;
+        }
+
+        .menu a {
+            color:var(--durazno);
+            text-decoration:none;
+            font-size:15px;
+            transition:.3s ease;
+        }
+
+        .menu a:hover {
+            color:var(--crema);
+        }
+
+        /* TÍTULO */
+        h1.titulo {
+            text-align:center;
+            margin-top:130px;
+            font-size:40px;
+            color:var(--durazno);
+            font-family:'Homemade Apple', cursive;
+        }
+
+        /* GALERÍA */
+        .galeria {
+            width:85%;
+            max-width:1050px;
+            margin:50px auto;
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+            gap:30px;
+        }
+
+        .galeria img {
+            width:100%;
+            height:330px;
+            object-fit:cover;
+            border-radius:10px;
+            box-shadow:0 6px 22px rgba(0,0,0,0.25);
+            transition:transform .3s ease, opacity .3s ease;
+        }
+
+        .galeria img:hover {
+            transform:scale(1.03);
+            opacity:.9;
+        }
+
+        /* VOLVER */
+        .volver {
+            display:block;
+            text-align:center;
+            margin:60px 0;
+            color:var(--crema);
+            text-decoration:none;
+            font-size:18px;
+        }
+
+        .volver:hover {
+            color:var(--durazno);
+        }
+
+        /* WHATSAPP */
+        .whatsapp-float {
+            position:fixed;
+            bottom:22px;
+            right:22px;
+            z-index:2000;
+        }
+
+        .whatsapp-float img {
+            width:58px;
+            height:58px;
+            border-radius:50%;
+            box-shadow:0 4px 12px rgba(0,0,0,0.25);
+            transition:transform .3s ease;
+        }
+
+        .whatsapp-float img:hover {
+            transform:scale(1.08);
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <a href="index.html">
+        <img src="img/logo-terracota.png" class="logo-header">
+    </a>
+
+    <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="bodas.html">Bodas</a>
+        <a href="maternidad.html">Maternidad</a>
+        <a href="infantil.html">Infantil</a>
+        <a href="amelia.html">Amelia</a>
+    </nav>
+</header>
+
+<h1 class="titulo">Little Girls</h1>
+
+<!-- GALERÍA -->
+<div class="galeria">
+    <img src="img/nina-1.jpg">
+    <img src="img/nina-2.jpg">
+    <img src="img/nina-3.jpg">
+    <img src="img/nina-4.jpg">
+    <img src="img/nina-5.jpg">
+    <img src="img/nina-6.jpg">
+</div>
+
+<!-- VOLVER -->
+<a href="infantil.html" class="volver">← Volver a Infantil</a>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/573133051492?text=Hola%20Susan%20🌞%20quiero%20información%20sobre%20fotografía%20Sol%20de%20Verano"
+   class="whatsapp-float" target="_blank">
+    <img src="img/whatsapp.png">
+</a>
+
+</body>
+</html>
